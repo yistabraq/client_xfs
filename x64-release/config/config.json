@@ -2,23 +2,22 @@
     "logging": {
         "name": "app",
         "level": "debug",
-        "path": "./logs",
+        "path": "./logs/app.log",
         "rotate": {
             "max_size_mb": 10,
             "max_files": 5
         },
-        "format": "%Y-%m-%dT%H:%M:%S.%fZ %l [%P:%t] %n : %v",
+        "format": "%Y-%m-%dT%H:%M:%S.%fZ %L [%P:%t] %n : %v",
         "offline_events_file": "./logs/offline_events.log"
     },
     "xfs": {
         "app_id": "XFS_CLIENT_APP",
         "timeout_ms": 30000,
-        "services": [
-            "CDM1",  
-            "PTR1",
-            "IDC1",
-            "PIN1"
-        ],
+        "service": {
+            "hkey" : "HKEY_USERS",
+            "su4bKey" : ".DEFAULT\\XFS\\LOGICAL_SERVICES"
+        },
+        "version": "3.20",
         "event_classes": [
             "SERVICE_EVENTS",
             "USER_EVENTS",

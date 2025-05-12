@@ -1,0 +1,12 @@
+2025-05-12-T01:48:39.245	056816	056292	ENTER	__cdecl Windows::BaseRawSharedMemory::BaseRawSharedMemory(unsigned long,const class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > &)	sName = XFSPP_MANAGER
+2025-05-12-T01:48:39.247	056816	056292	EXIT	__cdecl Windows::BaseRawSharedMemory::BaseRawSharedMemory(unsigned long,const class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > &)	sName = XFSPP_MANAGER	elapsed = 0
+2025-05-12-T01:48:39.247	056816	056292	ENTER	__cdecl Windows::SharedMemory<struct `anonymous namespace'::ShMemLayout>::SharedMemory(const class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > &)	
+2025-05-12-T01:48:39.247	056816	056292	EXIT	__cdecl Windows::SharedMemory<struct `anonymous namespace'::ShMemLayout>::SharedMemory(const class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > &)		elapsed = 0
+2025-05-12-T01:48:39.247	056816	056292	ENTER	void __cdecl Windows::BaseRawSharedMemory::access(class std::function<void __cdecl(unsigned long,void *)>)	
+2025-05-12-T01:48:39.247	056816	056292	EXIT	void __cdecl Windows::BaseRawSharedMemory::access(class std::function<void __cdecl(unsigned long,void *)>)		elapsed = 0
+2025-05-12-T01:48:39.249	056816	056292	ENTER	void __cdecl Windows::BaseRawSharedMemory::access(class std::function<void __cdecl(unsigned long,void *)>)	
+2025-05-12-T01:48:39.249	056816	056292	EXIT	void __cdecl Windows::BaseRawSharedMemory::access(class std::function<void __cdecl(unsigned long,void *)>)		elapsed = 0
+2025-05-12-T01:48:39.250	056816	056292	ENTER	__cdecl Windows::SharedMemory<struct `anonymous namespace'::ShMemLayout>::~SharedMemory(void)	
+2025-05-12-T01:48:39.250	056816	056292	EXIT	__cdecl Windows::SharedMemory<struct `anonymous namespace'::ShMemLayout>::~SharedMemory(void)		elapsed = 0
+2025-05-12-T01:48:39.250	056816	056292	ENTER	__cdecl Windows::BaseRawSharedMemory::~BaseRawSharedMemory(void)	
+2025-05-12-T01:48:39.250	056816	056292	EXIT	__cdecl Windows::BaseRawSharedMemory::~BaseRawSharedMemory(void)		elapsed = 0
