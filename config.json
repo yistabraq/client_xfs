@@ -1,0 +1,54 @@
+{
+    "logging": {
+        "name": "app",
+        "level": "debug",
+        "path": "./logs/app.log",
+        "rotate": {
+            "max_size_mb": 10,
+            "max_files": 5
+        },
+        "format": "%Y-%m-%dT%H:%M:%S.%fZ %L [%P:%t] %n : %v",
+        "offline_events_file": "./logs/offline_events.log"
+    },
+    "xfs": {
+        "app_id": "XFS",
+        "timeout_ms": 60000,
+        "service": {
+            "hkey": "HKEY_USERS",
+            "subkey": ".DEFAULT\\XFS\\LOGICAL_SERVICES"
+        },
+        "event_classes": [
+            "SERVICE_EVENTS",
+            "USER_EVENTS",
+            "SYSTEM_EVENTS",
+            "EXECUTE_EVENTS"
+        ],
+        "dll_path": "msxfs.dll"
+    },
+    "lmdb": {
+        "path": "data/event_store_lmdb",
+        "size": 100
+    },
+    "grpc": {
+        "address": "https://[::1]:50051",
+        "tls": true,
+        "ca_path": "./certs/ca.crt",
+        "client_cert": "./certs/client.crt",
+        "client_key": "./certs/client.key",
+        "domain_name": "localhost",
+		"max_retries": 3
+    },
+    "event_processor": {
+        "ProcessingIntervalMs": 100,
+        "PingIntervalSec": 120,
+        "StoredEventsBatchSize": 50,
+        "SendRealtimeIfConnected": true,
+        "DeviceName": "DefaultDevice"
+    },
+    "connection": {
+        "grpc_check_interval_sec": 30,
+        "xfs_check_interval_sec": 10,
+        "grpc_reconnect_timeout_sec": 30,
+        "xfs_reconnect_timeout_sec": 30
+    }
+}
