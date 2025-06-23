@@ -23,10 +23,12 @@
             "SYSTEM_EVENTS",
             "EXECUTE_EVENTS"
         ],
-        "dll_path": "msxfs.dll"
+        "dll_path": "msxfs.dll",
+        "xfs_min_version": "3.00",
+        "xfs_max_version": "3.20"
     },
     "lmdb": {
-        "path": "data/event_store_lmdb",
+        "path": "data",
         "size": 100
     },
     "grpc": {
