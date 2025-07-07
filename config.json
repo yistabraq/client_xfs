@@ -2,13 +2,9 @@
     "logging": {
         "name": "app",
         "level": "debug",
-        "path": "./logs/app.log",
-        "rotate": {
-            "max_size_mb": 10,
-            "max_files": 5
-        },
-        "format": "%Y-%m-%dT%H:%M:%S.%fZ %L [%P:%t] %n : %v",
-        "offline_events_file": "./logs/offline_events.log"
+        "directory":"logs",
+        "filename": "app.log",
+        "rotate": "daily"
     },
     "xfs": {
         "app_id": "XFS",
