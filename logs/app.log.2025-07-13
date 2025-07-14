@@ -1,0 +1,71 @@
+{"timestamp":"2025-07-13T05:04:23.892476Z","level":"INFO","fields":{"message":"Recherche des services XFS"},"target":"client"}
+{"timestamp":"2025-07-13T05:04:23.892893Z","level":"INFO","fields":{"message":"Services XFS trouvés: [Service { name: \"MyCardReader\", class: \"IDC\", provider: \"IDC\", handle: 0, opened: false, registred: false }]"},"target":"client"}
+{"timestamp":"2025-07-13T05:04:23.892992Z","level":"INFO","fields":{"message":"Attempting to load XFS Manager DLL ('msxfs.dll') and resolve symbols..."},"target":"client::xfs::api"}
+{"timestamp":"2025-07-13T05:04:23.907148Z","level":"INFO","fields":{"message":"'msxfs.dll' loaded successfully. Getting function addresses..."},"target":"client::xfs::api"}
+{"timestamp":"2025-07-13T05:04:23.907430Z","level":"INFO","fields":{"message":"Resolved symbol: WFSCleanUp"},"target":"client::xfs::api"}
+{"timestamp":"2025-07-13T05:04:23.907748Z","level":"INFO","fields":{"message":"Resolved symbol: WFSClose"},"target":"client::xfs::api"}
+{"timestamp":"2025-07-13T05:04:23.908039Z","level":"INFO","fields":{"message":"Resolved symbol: WFSOpen"},"target":"client::xfs::api"}
+{"timestamp":"2025-07-13T05:04:23.908339Z","level":"INFO","fields":{"message":"Resolved symbol: WFSAsyncOpen"},"target":"client::xfs::api"}
+{"timestamp":"2025-07-13T05:04:23.908675Z","level":"INFO","fields":{"message":"Resolved symbol: WFSStartUp"},"target":"client::xfs::api"}
+{"timestamp":"2025-07-13T05:04:23.908874Z","level":"INFO","fields":{"message":"Resolved symbol: WFSFreeResult"},"target":"client::xfs::api"}
+{"timestamp":"2025-07-13T05:04:23.909055Z","level":"INFO","fields":{"message":"Resolved symbol: WFSRegister"},"target":"client::xfs::api"}
+{"timestamp":"2025-07-13T05:04:23.909964Z","level":"INFO","fields":{"message":"Resolved symbol: WFSDeregister"},"target":"client::xfs::api"}
+{"timestamp":"2025-07-13T05:04:23.910087Z","level":"INFO","fields":{"message":"Resolved symbol: WFSAsyncRegister"},"target":"client::xfs::api"}
+{"timestamp":"2025-07-13T05:04:23.910487Z","level":"INFO","fields":{"message":"Resolved symbol: WFSAsyncDeregister"},"target":"client::xfs::api"}
+{"timestamp":"2025-07-13T05:04:23.910594Z","level":"INFO","fields":{"message":"Resolved symbol: WFSAsyncClose"},"target":"client::xfs::api"}
+{"timestamp":"2025-07-13T05:04:23.910700Z","level":"INFO","fields":{"message":"Finished getting XFS API function addresses."},"target":"client::xfs::api"}
+{"timestamp":"2025-07-13T05:04:23.912402Z","level":"INFO","fields":{"message":"XFS API démarré avec la version: \"Version: 0x0003, Low: 0x0101, High: 0x9903, Desc: 'WOSA/XFS API v3.00/v2.00', Status: ''\""},"target":"client"}
+{"timestamp":"2025-07-13T05:04:23.915598Z","level":"INFO","fields":{"message":"Le thread principal a l'ID: 59944"},"target":"client"}
+{"timestamp":"2025-07-13T05:04:23.915727Z","level":"INFO","fields":{"message":"En attente de messages..."},"target":"client"}
+{"timestamp":"2025-07-13T05:04:23.988461Z","level":"INFO","fields":{"message":"Tâche de sauvegarde en base démarrée."},"target":"client::db::db"}
+{"timestamp":"2025-07-13T05:04:23.988986Z","level":"INFO","fields":{"message":"Request id : 1"},"target":"client"}
+{"timestamp":"2025-07-13T05:04:28.996519Z","level":"INFO","fields":{"message":"Registry sended for MyCardReader succefully"},"target":"client"}
+{"timestamp":"2025-07-13T05:04:28.996794Z","level":"DEBUG","fields":{"message":"WFSFreeResult succeeded"},"target":"client"}
+{"timestamp":"2025-07-13T05:04:28.997875Z","level":"INFO","fields":{"message":"Request id : 2"},"target":"client"}
+{"timestamp":"2025-07-13T05:04:28.998002Z","level":"INFO","fields":{"message":"Service 'MyCardReader' (RequestID: 2) registered successfully. Now online."},"target":"client"}
+{"timestamp":"2025-07-13T05:04:28.999300Z","level":"DEBUG","fields":{"message":"WFSFreeResult succeeded"},"target":"client"}
+{"timestamp":"2025-07-13T05:05:23.985785Z","level":"INFO","fields":{"message":"Tâche Tokio: message #0 envoyé à la file d'attente MPSC"},"target":"client"}
+{"timestamp":"2025-07-13T05:05:23.990528Z","level":"DEBUG","fields":{"message":"Online services: [\n    Service {\n        name: \"MyCardReader\",\n        class: \"IDC\",\n        provider: \"IDC\",\n        handle: 1,\n        opened: true,\n        registred: true,\n    },\n]"},"target":"client"}
+{"timestamp":"2025-07-13T05:05:23.990864Z","level":"INFO","fields":{"message":"Thread principal: reçu 0 via MPSC (de tâche Tokio)"},"target":"client"}
+{"timestamp":"2025-07-13T05:05:23.991095Z","level":"DEBUG","fields":{"message":"List Of data: \n []"},"target":"client"}
+{"timestamp":"2025-07-13T05:06:24.002189Z","level":"INFO","fields":{"message":"Tâche Tokio: message #1 envoyé à la file d'attente MPSC"},"target":"client"}
+{"timestamp":"2025-07-13T05:06:24.004595Z","level":"DEBUG","fields":{"message":"Online services: [\n    Service {\n        name: \"MyCardReader\",\n        class: \"IDC\",\n        provider: \"IDC\",\n        handle: 1,\n        opened: true,\n        registred: true,\n    },\n]"},"target":"client"}
+{"timestamp":"2025-07-13T05:06:24.004934Z","level":"INFO","fields":{"message":"Thread principal: reçu 1 via MPSC (de tâche Tokio)"},"target":"client"}
+{"timestamp":"2025-07-13T05:06:24.005664Z","level":"DEBUG","fields":{"message":"List Of data: \n []"},"target":"client"}
+{"timestamp":"2025-07-13T05:06:38.032103Z","level":"INFO","fields":{"message":"Signal Ctrl+C reçu. Démarrage de l'arrêt gracieux..."},"target":"client"}
+{"timestamp":"2025-07-13T05:06:38.038510Z","level":"INFO","fields":{"message":"Registry sended for MyCardReader succefully"},"target":"client"}
+{"timestamp":"2025-07-13T05:06:38.038658Z","level":"INFO","fields":{"message":"WFS_DEREGISTER_COMPLETE for RequestID: 3"},"target":"client"}
+{"timestamp":"2025-07-13T05:06:38.038878Z","level":"INFO","fields":{"message":"Service 'MyCardReader' (HSERVICE: 3) deregistered successfully. Now offline."},"target":"client"}
+{"timestamp":"2025-07-13T05:06:38.042535Z","level":"DEBUG","fields":{"message":"WFSFreeResult succeeded"},"target":"client"}
+{"timestamp":"2025-07-13T05:06:38.257333Z","level":"DEBUG","fields":{"message":"Message WM_DESTROY reçu. Fermeture de l'application."},"target":"client::listener"}
+{"timestamp":"2025-07-13T05:06:38.259503Z","level":"INFO","fields":{"message":"Application shutting down."},"target":"client"}
+{"timestamp":"2025-07-13T05:08:18.314099Z","level":"INFO","fields":{"message":"Recherche des services XFS"},"target":"client"}
+{"timestamp":"2025-07-13T05:08:18.315821Z","level":"INFO","fields":{"message":"Services XFS trouvés: [Service { name: \"MyCardReader\", class: \"IDC\", provider: \"IDC\", handle: 0, opened: false, registred: false }]"},"target":"client"}
+{"timestamp":"2025-07-13T05:08:18.316432Z","level":"INFO","fields":{"message":"Attempting to load XFS Manager DLL ('msxfs.dll') and resolve symbols..."},"target":"client::xfs::api"}
+{"timestamp":"2025-07-13T05:08:18.331744Z","level":"INFO","fields":{"message":"'msxfs.dll' loaded successfully. Getting function addresses..."},"target":"client::xfs::api"}
+{"timestamp":"2025-07-13T05:08:18.331833Z","level":"INFO","fields":{"message":"Resolved symbol: WFSCleanUp"},"target":"client::xfs::api"}
+{"timestamp":"2025-07-13T05:08:18.331965Z","level":"INFO","fields":{"message":"Resolved symbol: WFSClose"},"target":"client::xfs::api"}
+{"timestamp":"2025-07-13T05:08:18.332042Z","level":"INFO","fields":{"message":"Resolved symbol: WFSOpen"},"target":"client::xfs::api"}
+{"timestamp":"2025-07-13T05:08:18.332152Z","level":"INFO","fields":{"message":"Resolved symbol: WFSAsyncOpen"},"target":"client::xfs::api"}
+{"timestamp":"2025-07-13T05:08:18.332952Z","level":"INFO","fields":{"message":"Resolved symbol: WFSStartUp"},"target":"client::xfs::api"}
+{"timestamp":"2025-07-13T05:08:18.333074Z","level":"INFO","fields":{"message":"Resolved symbol: WFSFreeResult"},"target":"client::xfs::api"}
+{"timestamp":"2025-07-13T05:08:18.333167Z","level":"INFO","fields":{"message":"Resolved symbol: WFSRegister"},"target":"client::xfs::api"}
+{"timestamp":"2025-07-13T05:08:18.333273Z","level":"INFO","fields":{"message":"Resolved symbol: WFSDeregister"},"target":"client::xfs::api"}
+{"timestamp":"2025-07-13T05:08:18.333709Z","level":"INFO","fields":{"message":"Resolved symbol: WFSAsyncRegister"},"target":"client::xfs::api"}
+{"timestamp":"2025-07-13T05:08:18.333804Z","level":"INFO","fields":{"message":"Resolved symbol: WFSAsyncDeregister"},"target":"client::xfs::api"}
+{"timestamp":"2025-07-13T05:08:18.334275Z","level":"INFO","fields":{"message":"Resolved symbol: WFSAsyncClose"},"target":"client::xfs::api"}
+{"timestamp":"2025-07-13T05:08:18.334378Z","level":"INFO","fields":{"message":"Finished getting XFS API function addresses."},"target":"client::xfs::api"}
+{"timestamp":"2025-07-13T05:08:18.336123Z","level":"INFO","fields":{"message":"XFS API démarré avec la version: \"Version: 0x0003, Low: 0x0101, High: 0x9903, Desc: 'WOSA/XFS API v3.00/v2.00', Status: ''\""},"target":"client"}
+{"timestamp":"2025-07-13T05:08:18.343301Z","level":"INFO","fields":{"message":"Le thread principal a l'ID: 39560"},"target":"client"}
+{"timestamp":"2025-07-13T05:08:18.343467Z","level":"INFO","fields":{"message":"En attente de messages..."},"target":"client"}
+{"timestamp":"2025-07-13T05:08:18.367248Z","level":"INFO","fields":{"message":"Request id : 1"},"target":"client"}
+{"timestamp":"2025-07-13T05:08:18.367963Z","level":"INFO","fields":{"message":"Tâche de sauvegarde en base démarrée."},"target":"client::db::db"}
+{"timestamp":"2025-07-13T05:08:23.372422Z","level":"INFO","fields":{"message":"Registry sended for MyCardReader succefully"},"target":"client"}
+{"timestamp":"2025-07-13T05:08:23.372871Z","level":"DEBUG","fields":{"message":"WFSFreeResult succeeded"},"target":"client"}
+{"timestamp":"2025-07-13T05:08:23.373585Z","level":"INFO","fields":{"message":"Request id : 2"},"target":"client"}
+{"timestamp":"2025-07-13T05:08:23.373831Z","level":"INFO","fields":{"message":"Service 'MyCardReader' (RequestID: 2) registered successfully. Now online."},"target":"client"}
+{"timestamp":"2025-07-13T05:08:23.375108Z","level":"DEBUG","fields":{"message":"WFSFreeResult succeeded"},"target":"client"}
+{"timestamp":"2025-07-13T05:09:18.363506Z","level":"INFO","fields":{"message":"Tâche Tokio: message #0 envoyé à la file d'attente MPSC"},"target":"client"}
+{"timestamp":"2025-07-13T05:09:18.366651Z","level":"DEBUG","fields":{"message":"Online services: [\n    Service {\n        name: \"MyCardReader\",\n        class: \"IDC\",\n        provider: \"IDC\",\n        handle: 1,\n        opened: true,\n        registred: true,\n    },\n]"},"target":"client"}
+{"timestamp":"2025-07-13T05:09:18.367078Z","level":"INFO","fields":{"message":"Thread principal: reçu 0 via MPSC (de tâche Tokio)"},"target":"client"}
+{"timestamp":"2025-07-13T05:09:18.367675Z","level":"DEBUG","fields":{"message":"List Of data: \n []"},"target":"client"}
