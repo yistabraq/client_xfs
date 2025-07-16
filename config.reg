@@ -1,0 +1,63 @@
+Windows Registry Editor Version 5.00
+
+; Clé principale pour les paramètres du service
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\WOW6432Node\D4C\XFSGatewayService]
+
+; --- Section "logging" ---
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\D4C\XFSGatewayService\logging]
+"name"="app"
+"level"="debug"
+"directory"="C:\\Agent\\D4C\\XFSGatewayService\\logs" ; Chemin absolu avec Agent
+"filename"="app.log"
+"rotate"="daily"
+
+; --- Section "xfs" ---
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\D4C\XFSGatewayService\xfs]
+"app_id"="XFS"
+"timeout_ms"=dword:0000ea60 ; 60000 en hexadécimal
+"dll_path"="msxfs.dll"
+"xfs_min_version"="3.00"
+"xfs_max_version"="3.20"
+
+; Paramètres "service" imbriqués sous "xfs"
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\D4C\XFSGatewayService\xfs\service]
+"hkey"="HKEY_USERS"
+"subkey"=".DEFAULT\\XFS\\LOGICAL_SERVICES"
+
+; Tableau "event_classes" (REG_MULTI_SZ)
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\D4C\XFSGatewayService\xfs]
+"event_classes"=hex(7):53,00,45,00,52,00,56,00,49,00,43,00,45,00,5f,00,45,00,\
+  56,00,45,00,4e,00,54,00,53,00,00,00,55,00,53,00,45,00,52,00,5f,00,45,00,56,\
+  00,45,00,4e,00,54,00,53,00,00,00,53,00,59,00,53,00,54,00,45,00,4d,00,5f,00,\
+  45,00,56,00,45,00,4e,00,54,00,53,00,00,00,45,00,58,00,45,00,43,00,55,00,54,\
+  00,45,00,5f,00,45,00,56,00,45,00,4e,00,54,00,53,00,00,00,00,00
+
+; --- Section "lmdb" ---
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\D4C\XFSGatewayService\lmdb]
+"path"="C:\\Agent\\D4C\\XFSGatewayService\\data" ;
+"size"=dword:00000064 ; 100 en hexadécimal
+
+; --- Section "grpc" ---
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\D4C\XFSGatewayService\grpc]
+"address"="https://[::1]:50051"
+"tls"=dword:00000001 ; true
+"ca_path"="C:\\Agent\\D4C\\XFSGatewayService\\certs\\ca.crt"
+"client_cert"="C:\\Agent\\D4C\\XFSGatewayService\\certs\\client.crt"
+"client_key"="C:\\Agent\\D4C\\XFSGatewayService\\certs\\client.key"
+"domain_name"="localhost"
+"max_retries"=dword:00000003 ; 3
+
+; --- Section "event_processor" ---
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\D4C\XFSGatewayService\event_processor]
+"ProcessingIntervalMs"=dword:00000064 ; 100
+"PingIntervalSec"=dword:00000078 ; 120
+"StoredEventsBatchSize"=dword:00000032 ; 50
+"SendRealtimeIfConnected"=dword:00000001 ; true
+"DeviceName"="DefaultDevice"
+
+; --- Section "connection" ---
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\D4C\XFSGatewayService\connection]
+"grpc_check_interval_sec"=dword:0000001e ; 30
+"xfs_check_interval_sec"=dword:0000000a ; 10
+"grpc_reconnect_timeout_sec"=dword:0000001e ; 30
+"xfs_reconnect_timeout_sec"=dword:0000001e ; 30
