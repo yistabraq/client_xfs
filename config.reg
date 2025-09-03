@@ -52,7 +52,7 @@ Windows Registry Editor Version 5.00
 "ProcessingIntervalMs"=dword:00000064 ; 100
 "PingIntervalSec"=dword:00000078 ; 120
 "StoredEventsBatchSize"=dword:00000032 ; 50
-"SendRealtimeIfConnected"=dword:00000001 ; true
+"SendRealtimeIfConnected"=dword:00000000 ; false
 "DeviceName"="DefaultDevice"
 
 ; --- Section "connection" ---
